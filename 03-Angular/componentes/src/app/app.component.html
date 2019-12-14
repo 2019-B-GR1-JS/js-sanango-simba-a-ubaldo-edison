@@ -1,0 +1,58 @@
+
+<style>
+  h1 {
+    color: blue;
+  }
+</style>
+  <h1> Inicio </h1>
+
+  <h2>PIPES</h2>
+
+  {{fecha | date: 'yyyy MM dd '}}
+  {{sueldo | currency}}
+  {{universidad | uppercase}}
+
+
+  <h2>DIRECTIVAS</h2>
+
+  <p *ngIf = "true">SI</p>
+  <p *ngIf="false" >NO</p>
+<ul> <!-- order list -->
+  <li *ngFor="let nombreVariable of arregloObjetos">
+    <button>a</button>
+    <a href="">LINK</a>
+    <p>ALOO</p>
+    <p>{{nombreVariable.nombre}}</p>
+    <app-mi-primer-componente
+      [titulo] = "nombreVariable.apellido"
+      [textoImagen]="nombreVariable.nombre"
+      [textoBoton]="nombreVariable.sueldo.toString()"
+      [imagen]="nombreVariable.comida"
+      [width]="nombreVariable.w"
+      [heigth]="nombreVariable.h"
+      (cambioSueldo)="imprimirSueldo($event)"
+      (aumHeight)="aumenarWH($event)"
+    ></app-mi-primer-componente>
+  </li>
+</ul>
+
+
+
+
+<!--
+<app-mi-primer-componente
+  [titulo] = "arregloObjetos[2].apellido"
+  [textoImagen]="arregloObjetos[2].nombre"
+  [textoBoton]="arregloObjetos[2].sueldo.toString()"
+  [imagen]="arregloObjetos[2].comida"
+></app-mi-primer-componente>
+
+<app-mi-primer-componente
+  [titulo] = "arregloObjetos[1].apellido"
+  [textoImagen]="arregloObjetos[1].nombre"
+  [textoBoton]="arregloObjetos[1].sueldo.toString()"
+  [imagen]="arregloObjetos[1].comida"
+></app-mi-primer-componente>
+-->
+
+
