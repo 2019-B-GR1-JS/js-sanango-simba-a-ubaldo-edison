@@ -1,0 +1,97 @@
+ion-img.profile-photo {
+  width: 35px;
+  height: 35px;
+  border-radius: 1px 1px 1px 1px;
+}
+
+ion-card.main-card {
+  box-shadow:none;
+  border-radius: 1px 1px 1px 1px;
+}
+
+ion-tab-bar.first-tabbar{
+  box-shadow: none;
+
+}
+
+ion-tab-button.home {
+  border-radius: 100px 10px 10px 10px;
+
+}
+
+ion-searchbar.searchbar {
+  border-bottom: none;
+}
+
+ion-button.button-sort {
+  font-family: "Calibri";
+  position: relative;
+  bottom: 7px;
+}
+
+ion-button.button-view {
+  position: relative;
+  bottom: 7px;
+  left: 160px;
+}
+
+ion-item.second-item {
+  height: 40px;
+}
+
+ion-avatar.avatar {
+  position: relative;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+ion-label.user_ {
+  position: relative;
+  left: 20px;
+  bottom: 12px;
+}
+
+ion-label.time_ {
+  position: relative;
+  top: 3px;
+  left: 23px;
+}
+
+p.content_ {
+  position: relative;
+  font-size: 17px;
+  right: 20px;
+  bottom: 25px;
+}
+
+ion-img.image_ {
+  position: relative;
+  width: 100px;
+  height: 70px;
+  bottom: 42px;
+ }
+
+ion-card-content.card_content{
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+ion-card-content.card_image {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+
+ion-col.col_content {
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+
+ion-col.col_image {
+  position: relative;
+  width: 200px;
+  height:60px;
+}
