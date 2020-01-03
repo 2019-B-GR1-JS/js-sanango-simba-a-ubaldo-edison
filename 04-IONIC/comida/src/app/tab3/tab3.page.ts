@@ -10,7 +10,10 @@ export class Tab3Page {
 
   usuario = {
     nombre: '',
-    apellido: ''
+    correo: '',
+    edad: 0,
+    password: '',
+    passwordConfirmation: ''
   };
 
   constructor() {}
@@ -19,4 +22,11 @@ export class Tab3Page {
     console.log(formulario);
   }
 
+  validarPasswordIguales(): boolean {
+    if ( this.usuario.password === this.usuario.passwordConfirmation) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }
