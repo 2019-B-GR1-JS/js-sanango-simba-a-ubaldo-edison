@@ -66,7 +66,6 @@ CreateOne
 POST //http://localhost:1337 + modelo
 Ej: POST //http://localhost:1337/usuario
 
-
 UpdateOne
 PUT //http://localhost:1337 + modelo/:id
 Ej: PUT //http://localhost:1337/usuario/1
