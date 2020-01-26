@@ -8,6 +8,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 })
 export class ModalEditarUsuarioComponent implements OnInit {
 
+
   nombre = "";
   apellido = "";
   correo = "";

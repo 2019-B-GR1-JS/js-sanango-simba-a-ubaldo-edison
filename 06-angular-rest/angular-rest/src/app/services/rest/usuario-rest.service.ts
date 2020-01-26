@@ -26,18 +26,30 @@ export class UsuarioRestService {
       );
   }
 
+  crear(datos) : Observable<any> {
+    const urlCrear = this.url;
+    return this.httpClient
+      .post(
+        urlCrear,
+        datos
+      );
+  }
+
+
   buscar(busqueda: string) : Observable<any> {
     let consulta = '';
     if(busqueda ){
       consulta =  '?nombre=' + busqueda;
     }
+
     const urlBuscar = this.url + consulta;
+    console.log(urlBuscar);
     return this.httpClient.get(urlBuscar);
 
   }
 
   eliminar(id: number): Observable<any> {
-    const urlEliminar = this.url + id;
+    const urlEliminar = this.url + '/' + id;
     return this.httpClient.delete(urlEliminar);
 
   }
