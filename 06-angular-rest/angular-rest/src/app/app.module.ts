@@ -21,6 +21,7 @@ import { RutaEditarLibroComponent } from './rutas/ruta-editar-libro/ruta-editar-
 import { RutaBuscarLibroComponent } from './rutas/ruta-buscar-libro/ruta-buscar-libro.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { RutaBuscarLibroComponent } from './rutas/ruta-buscar-libro/ruta-buscar-
     RutaGestionLibrosComponent,
     RutaCrearLibroComponent,
     RutaEditarLibroComponent,
-    RutaBuscarLibroComponent
+    RutaBuscarLibroComponent,
+
   ],
   entryComponents:[
     ModalEditarUsuarioComponent

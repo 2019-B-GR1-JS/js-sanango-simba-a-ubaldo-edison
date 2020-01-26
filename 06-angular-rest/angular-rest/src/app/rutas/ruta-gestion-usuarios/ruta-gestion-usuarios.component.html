@@ -1,6 +1,13 @@
 
 
 <h3>Gestión de Usuarios</h3>
+
+<p-button label="Crear" (onClick)="crear()" ></p-button>
+
+<br>
+<br>
+<br>
+
 <span class="ui-float-label">
     <input id="float-input"
            type="text"
@@ -10,9 +17,11 @@
       <label for="float-input">
       Username
     </label>
+  <p-button label="Buscar" (onClick)="buscar()"> </p-button>
 </span>
 
-<p-button label="Buscar" (onClick)="buscar()"> </p-button>
+
+
 
 <p-table [value]="usuariosFiltrados()"
          [paginator]="true"
