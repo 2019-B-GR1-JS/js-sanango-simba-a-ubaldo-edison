@@ -4,7 +4,7 @@ import {UsuarioRestService} from "../../services/rest/usuario-rest.service";
 import {FILAS} from 'src/app/Constantes/numero-filas-por-tabla';
 import {ModalEditarUsuarioComponent} from "src/app/modales/modal-editar-usuario/modal-editar-usuario.component";
 import {MatDialog} from '@angular/material/dialog';
-import {ModalCrearUsuarioComponent} from "../../modales/modal-crear-usuario/modal-crear-usuario.component";
+
 
 @Component({
   selector: 'app-ruta-gestion-usuarios',
@@ -62,53 +62,9 @@ export class RutaGestionUsuariosComponent implements OnInit {
       );
   }
 
-  crear() {
-    console.log('Creando usuario');
 
-    const matDialogRefModalCrearUsuario  = this.MatDialog.open(ModalCrearUsuarioComponent, {width: '600px'});
 
-  /*  const matDialogRefModalCrearUsuario = this.MatDialog
-      .open(
-        ModalCrearUsuarioComponent,
-        {
-          width: '600px',
-        }
-      );
-*/
 
-    const respuestaDialogo$ = matDialogRefModalCrearUsuario.afterClosed();
-    console.log(matDialogRefModalCrearUsuario.componentInstance.usuario.nombre);
-    respuestaDialogo$.subscribe(
-      ()=> {
-          //this.crearUsuarioHTTP();
-      }, (error)=> {
-        console.error(error);
-      }
-    );
-
-  }
-
-  crearUsuarioHTTP(datos) {
-
-    const usuarioCreado$ = this.usuarioRestService.crear(datos);
-
-    usuarioCreado$
-      .subscribe(
-        (usuarioCreado: any) => {
-          console.log(usuarioCreado);
-          const indice = this.usuarios.length;
-
-          this.usuarios[indice].nombre = datos.usuario.nombre;
-          this.usuarios[indice].apellido = datos.usuario.apellido;
-          this.usuarios[indice].correo = datos.usuario.correo;
-          this.usuarios[indice].password = datos.usuario.password;
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-
-  }
 
 
   editar(usuario) {
