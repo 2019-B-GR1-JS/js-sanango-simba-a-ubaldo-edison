@@ -2,7 +2,7 @@
 
 <h3>Gestión de Usuarios</h3>
 
-<p-button label="Crear" (onClick)="crear()" ></p-button>
+
 
 <br>
 <br>
@@ -73,6 +73,11 @@
       <td>
         <p-button label="EDITAR" (click)="editar(usuario)"></p-button>
         <p-button label="ELIMINAR" (click)="eliminar(usuario)"></p-button>
+
+        <a [routerLink]="['/inicio','gestion-usuarios',  usuario.id, 'gestion-libros', 'buscar']" >
+          <p-button label="GESTIONAR LIBROS"></p-button>
+        </a>
+
       </td>
     </tr>
   </ng-template>
