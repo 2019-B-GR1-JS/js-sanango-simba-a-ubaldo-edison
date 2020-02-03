@@ -4,7 +4,7 @@
 //nombre = "Pedro";
 //Mutable
 //nombre = 1;
-const cedula = 1727161621;
+const cedula = 17271616212;
 const mensaje = `Siempre usar "const", si ya toca usar "let y nunca usar
 "var"`;
 let nombre = "a";

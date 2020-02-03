@@ -7,6 +7,7 @@ import {RutaGestionLibrosComponent} from "./rutas/ruta-gestion-libros/ruta-gesti
 import {RutaBuscarLibroComponent} from "./rutas/ruta-buscar-libro/ruta-buscar-libro.component";
 import {RutaCrearLibroComponent} from "./rutas/ruta-crear-libro/ruta-crear-libro.component";
 import {RutaEditarLibroComponent} from "./rutas/ruta-editar-libro/ruta-editar-libro.component";
+import {EstaLogeadoPolicy} from "./services/auth/politicas/estaLogeado.policy";
 
 
 const routes: Routes = [
@@ -16,7 +17,10 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: RutaLoginComponent
+    component: RutaLoginComponent,
+    canActivate: [
+      EstaLogeadoPolicy,  //esto es un arreglo o un booleano
+    ]
   },
   {
     path: 'inicio/gestion-usuarios',
@@ -46,4 +50,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
