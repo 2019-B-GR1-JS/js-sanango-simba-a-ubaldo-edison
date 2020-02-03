@@ -35,7 +35,6 @@ export class LibroRestService {
       );
   }
 
-
   buscar(busqueda: string) : Observable<any> {
     let consulta = '';
     if(busqueda ){
