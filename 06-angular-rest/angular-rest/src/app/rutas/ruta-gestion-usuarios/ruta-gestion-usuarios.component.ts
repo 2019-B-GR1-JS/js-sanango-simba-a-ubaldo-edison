@@ -62,11 +62,6 @@ export class RutaGestionUsuariosComponent implements OnInit {
       );
   }
 
-
-
-
-
-
   editar(usuario) {
     console.log('Editando usuario', usuario);
     const matDialogRefModalEditarUsuario = this.MatDialog

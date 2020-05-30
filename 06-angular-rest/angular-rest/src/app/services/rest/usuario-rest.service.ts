@@ -13,9 +13,7 @@ export class UsuarioRestService {
   constructor(
     // Dependecias: http
     private readonly httpClient: HttpClient, // servicio http
-  ) {
-
-  }
+  ) {}
 
   editar(id:number,datos) : Observable<any> {
     const urlEditar = this.url + '/' + id;
